@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --width-mobile: 25rem;
+    --width-desktop: 75rem;
+
+    --clr-primary-orange: hsl(31, 77%, 52%);
+    --clr-primary-cyan: hsl(184, 100%, 22%);
+    --clr-primary-drk-cyan: hsl(179, 100%, 13%);
+
+    --clr-neutral-white: hsla(0, 0%, 100%, 0.75);
+    /* paragraphs */
+    --clr-neutral-grey: hsl(0, 0%, 95%);
+    /* background, headings, buttons */
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --ff-lexend-deca: 'Lexend Deca', sans-serif;
+    --ff-big-shoulders: 'Big Shoulders Display', cursive;
+
+    font-size: 15px;
+}
+
+body {
+    font-family: var(--ff-lexend-deca);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-grey);
+
+    background-color: var(--clr-neutral-grey);
+}
+
+.cards-container {
+    min-height: 100vh;
+    width: min(95%, var(--width-desktop));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    padding: 4em;
+}
+
+.card:nth-child(1) {
+    background-color: var(--clr-primary-orange);
+    border-radius: .6em 0 0 .6em;
+    transform: translate(0, 150%);
+}
+.card:nth-child(1) .btn {
+    color: var(--clr-primary-orange);
+}
+
+.card:nth-child(2) {
+    background-color: var(--clr-primary-cyan);
+    transform: translate(0, 150%);
+}
+
+.card:nth-child(2) .btn {
+    color: var(--clr-primary-cyan);
+}
+
+.card:nth-child(3) {
+    background-color: var(--clr-primary-drk-cyan);
+    border-radius: 0 .6em .6em 0;
+    transform: translate(0, 150%);
+}
+
+.card:nth-child(3) .btn {
+    color: var(--clr-primary-drk-cyan);
+}
+
+.card-title {
+    font-family: var(--ff-big-shoulders);
+    font-weight: var(--fw-700);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    padding-bottom: 3rem;
+
+    opacity: 0;
+}
+
+.card img {
+    width: 5em;
+    height: auto;
+    padding-bottom: 3rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    color: var(--clr-neutral-white);
+    padding-bottom: 7rem;
+
+    opacity: 0;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 1.15rem;
+    padding: 1rem 2rem;
+    background-color: var(--clr-neutral-grey);
+    width: max-content;
+    border-radius: 5em;
+
+    opacity: 0;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: transparent;
+    border: 2px solid white;
+    color: var(--clr-neutral-grey) !important;
+}
+
+.attribution {
+    display: none;
+}
